@@ -15,5 +15,3 @@ __pychache__/
 
 src/**/migrations/*.py
 !src/**/migrations/__init__.py
-
-media/**
