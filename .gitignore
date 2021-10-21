@@ -8,8 +8,9 @@
 
 .coverage
 .DS_Store
+.env
 
-env
+env/
 
 __pychache__/
 
