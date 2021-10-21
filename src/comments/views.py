@@ -16,14 +16,14 @@ class CommentsViewSet(viewsets.GenericViewSet,
     def get_queryset(self):
         return self.queryset.all()
 
-    @action(detail=False, methods=['POST'], url_path='create-comment-profile')
+    @action(detail=False, methods=['POST'], url_path='create-profile')
     def create_comment_profile(self, request, *args, **kwargs):
         if self.request.user.is_authenticated:
             # create comment
             ...
         return
 
-    @action(detail=True, methods=['POST'], url_path='create-child-comment-profile')
+    @action(detail=True, methods=['POST'], url_path='create-child-profile')
     def create_child_comments_profile_user(self, request, *args, **kwargs):
         parent_comment_id = kwargs['pk']
         return
