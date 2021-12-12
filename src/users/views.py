@@ -21,9 +21,12 @@ class UsersViewSet(viewsets.GenericViewSet, mixins.DestroyModelMixin):
         instance.save()
 
     def get_serializer_class(self):
-        if self.action == 'list_users': return UserSerializer
-        elif self.action == 'create_user': return CreateUserSerializer
-        elif self.action == 'friend_notifications': return FriendNotifications
+        if self.action == 'list_users':
+            return UserSerializer
+        elif self.action == 'create_user':
+            return CreateUserSerializer
+        elif self.action == 'friend_notifications':
+            return FriendNotifications
 
     @action(detail=False, url_path='list')
     def list_users(self, request, *args, **kwargs):
